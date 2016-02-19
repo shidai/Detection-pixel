@@ -1,1 +1,2 @@
 mpicc -o detectionNpixel detection.c T2toolkit.c -Wall -lm -lfftw3  
+mpicc -o detectionMatched detection_matchedFilter.c T2toolkit.c -Wall -lm -lfftw3  

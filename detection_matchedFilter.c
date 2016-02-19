@@ -6,7 +6,7 @@
 #include <fftw3.h>
 //#include <gsl/gsl_rng.h>
 //#include <gsl/gsl_randist.h>
-#include "detection_matchedFilter.h"
+#include "detection.h"
 #include <mpi.h>
 
 int main (int argc, char* argv[])
@@ -112,7 +112,7 @@ int main (int argc, char* argv[])
 		{
 			control.nsub = tn[i];
 			control.tsub = control.T/control.nsub;
-			//control.scint_ts = control.tsub;
+			control.scint_ts = control.tsub;
 			control.whiteLevel = 0.1*sqrt(control.nsub*control.nchan);  // 0.1 gives 1 to a 10*10 dynamic spectrum
 			//printf ("%d %lf %lf %lf\n", control.nsub, control.tsub, control.scint_ts, control.whiteLevel);
 
